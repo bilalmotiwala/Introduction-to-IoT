@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<body>
+	<h1>Raspberry Pi Web Interface</h1>
+	<button id="led">LED 1</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+<script>
+	var socket = io();
+	window.addEventListener("load", function(){
+		var lightbox = document.getElementById("led");
+		
+		lightbox.addEventListener("click", function() {
+			socket.emit("led", Number(this.click));
+		});
+	});
+	
+	socket.on('led', function (data) {
+		document.getElementById("led").onclick = data;
+		socket.emit("led", data);
+	});
+	
+</script>
+</body>
+</head>
+</html>
