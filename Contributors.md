@@ -9,6 +9,7 @@ This project is probably the highlight of my university life and hence I have de
 ### The Team
 1. [Muhammad Bilal Motiwala](https://github.com/bilalmotiwala)
 2. [Negar Vahid](https://github.com/negarvahid)
+3. [Mina Sarkies](#)
 
 ---
 ### What's Next?
